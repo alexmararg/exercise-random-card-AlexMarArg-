@@ -78,7 +78,7 @@ function createCard() {
     }
     cuentaAtras10Seg();
 }
-function cuentaAtras10Seg() {
+function cuentaAtras10Seg() {//Temporizador de 10 segundos 
     clearTimeout(timer);
     timer = setTimeout(createCard, 10000);
 }
@@ -91,7 +91,10 @@ function cambiarEstilo() {
         cardB.style.height="25rem";
         card.style.fontSize ="7rem";
         mid.style.paddingBottom= "0rem";
+        document.getElementsByClassName('Inp')[0].innerHTML="";
+        document.getElementsByClassName('Inp')[1].innerHTML="";
         mid.innerHTML = cardN.num;
+
         isSecondStyle=false;
     } else {
         cardB.style.width="16.8rem";
@@ -99,17 +102,25 @@ function cambiarEstilo() {
         card.style.fontSize ="27.59rem";
         mid.style.paddingBottom= "3.5rem";
         mid.innerHTML = cardN.estiloB[cardS.indice];
+        document.getElementsByClassName('Inp')[0].innerHTML="";
+        document.getElementsByClassName('Inp')[1].innerHTML="";
         isSecondStyle=true
     }
 }
 document.getElementsByClassName('Inp')[0].addEventListener('change',(e)=>{
     console.log('Width: '+e.target.value);
+    let firWid =cardB.style.width;
     cardB.style.width= e.target.value;
-    alert("😡¡¡¡ME HAS DESMONTADO TODO EL ETILO DE LA CARTA!!! 🤯 Con lo que me ha costado todo este css 😭");
+    if(firWid!==cardB.style.width){
+        alert("😡¡¡¡ME HAS DESMONTADO TODO EL ETILO DE LA CARTA!!! 🤯 Con lo que me ha costado todo este css 😭");
+    }
 });
 document.getElementsByClassName('Inp')[1].addEventListener('change',(e)=>{
     console.log('Height: '+e.target.value);
+    let firHei=cardB.style.height;
     cardB.style.height= e.target.value;
-    alert("😡¡¡¡ME HAS DESMONTADO TODO EL ETILO DE LA CARTA!!! 🤯 Con lo que me ha costado todo este css 😭");
+    if(firHei!==cardB.style.height){
+        alert("😡¡¡¡ME HAS DESMONTADO TODO EL ETILO DE LA CARTA!!! 🤯 Con lo que me ha costado todo este css 😭");
+    }
 });
 createCard();

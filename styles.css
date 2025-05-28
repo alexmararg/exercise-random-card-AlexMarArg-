@@ -43,7 +43,7 @@ body{
   content: "";
   position: absolute;
   width: 40%;
-  height: 1250%;
+  height: 150%;
   background: #40E0D0;
   background: -webkit-linear-gradient(to right, #ff00801a, #ff0080, #ff4800, #FF8C00, #d9ff00, #40E0D0, #40e0d01a);
   background: linear-gradient(to right, #ff00801a, #ff0080,#ff4800, #FF8C00, #d9ff00, #40E0D0, #40e0d01a);
