@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Proyecto Carta Aleatoria</title>
+</head>
+<body>
+    <div class="container">
+        <div class="cardBox">
+            <div id="card">
+                <div class="upperCard">♦️</div>
+                <div class="middleCard">3</div>
+                <div class="underCard">♦️</div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="button-wrapper">
+            <button class="button" type="button" onclick="createCard()">Cambio de carta</button>
+            <div class="button-bg"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="button-wrapper">
+            <input class="Inp" type=text placeholder="Width: 17rem" pattern="[0-9]{2}rem">
+            <div class="button-bg"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="button-wrapper">
+            <input class="Inp" type=text placeholder="Height: 25rem" pattern="[0-9]{2}rem">
+            <div class="button-bg"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="button-wrapper">
+            <button class="button" type="button" onclick="cambiarEstilo()">Cambio Estilo</button>
+            <div class="button-bg"></div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
