@@ -15,8 +15,8 @@ const symbols =[{
         color: '#e44145',
         indice: 3
 }];
-const nums=[{
-        num:1,
+const nums=[{/*Iconos sacados de https://es.piliapp.com/symbol/card-suit/*/
+        num:'A',
         estiloB:['🂡','🃑','🂱','🃁']
     },{
         num:2,
@@ -57,6 +57,7 @@ const nums=[{
 }]
 let isSecondStyle=false;
 
+const cardB=document.getElementsByClassName("cardBox")[0];
 const card=document.getElementById("card");
 const upp=document.querySelector(".upperCard");
 const mid=document.querySelector(".middleCard");
@@ -86,11 +87,15 @@ function addAleatory(arr) {
 }
 function cambiarEstilo() {
     if (isSecondStyle) {
+        cardB.style.width="16.8rem";
+        cardB.style.height="25rem";
         card.style.fontSize ="7rem";
         mid.style.paddingBottom= "0rem";
         mid.innerHTML = cardN.num;
         isSecondStyle=false;
     } else {
+        cardB.style.width="16.8rem";
+        cardB.style.height="25rem";
         card.style.fontSize ="27.59rem";
         mid.style.paddingBottom= "3.5rem";
         mid.innerHTML = cardN.estiloB[cardS.indice];
@@ -99,8 +104,12 @@ function cambiarEstilo() {
 }
 document.getElementsByClassName('Inp')[0].addEventListener('change',(e)=>{
     console.log('Width: '+e.target.value);
+    cardB.style.width= e.target.value;
+    alert("😡¡¡¡ME HAS DESMONTADO TODO EL ETILO DE LA CARTA!!! 🤯 Con lo que me ha costado todo este css 😭");
 });
 document.getElementsByClassName('Inp')[1].addEventListener('change',(e)=>{
     console.log('Height: '+e.target.value);
+    cardB.style.height= e.target.value;
+    alert("😡¡¡¡ME HAS DESMONTADO TODO EL ETILO DE LA CARTA!!! 🤯 Con lo que me ha costado todo este css 😭");
 });
 createCard();

@@ -10,7 +10,7 @@ body{
 }
 
 .cardBox {/*Sacado de codepen https://codepen.io/sacsam005/pen/ZEvyVPg*/
-  width: 17rem;
+  width: 16.8rem;
   height: 25rem;
   position: relative;
   display: grid;
