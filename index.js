@@ -91,8 +91,8 @@ function cambiarEstilo() {
         cardB.style.height="25rem";
         card.style.fontSize ="7rem";
         mid.style.paddingBottom= "0rem";
-        document.getElementsByClassName('Inp')[0].innerHTML="";
-        document.getElementsByClassName('Inp')[1].innerHTML="";
+        document.getElementsByClassName('Inp')[0].value="";
+        document.getElementsByClassName('Inp')[1].value="";
         mid.innerHTML = cardN.num;
 
         isSecondStyle=false;
@@ -102,8 +102,8 @@ function cambiarEstilo() {
         card.style.fontSize ="27.59rem";
         mid.style.paddingBottom= "3.5rem";
         mid.innerHTML = cardN.estiloB[cardS.indice];
-        document.getElementsByClassName('Inp')[0].innerHTML="";
-        document.getElementsByClassName('Inp')[1].innerHTML="";
+        document.getElementsByClassName('Inp')[0].value="";
+        document.getElementsByClassName('Inp')[1].value="";
         isSecondStyle=true
     }
 }
@@ -113,6 +113,7 @@ document.getElementsByClassName('Inp')[0].addEventListener('change',(e)=>{
     cardB.style.width= e.target.value;
     if(firWid!==cardB.style.width){
         alert("😡¡¡¡ME HAS DESMONTADO TODO EL ETILO DE LA CARTA!!! 🤯 Con lo que me ha costado todo este css 😭");
+        document.getElementsByClassName('Inp')[0].value="";
     }
 });
 document.getElementsByClassName('Inp')[1].addEventListener('change',(e)=>{
@@ -121,6 +122,7 @@ document.getElementsByClassName('Inp')[1].addEventListener('change',(e)=>{
     cardB.style.height= e.target.value;
     if(firHei!==cardB.style.height){
         alert("😡¡¡¡ME HAS DESMONTADO TODO EL ETILO DE LA CARTA!!! 🤯 Con lo que me ha costado todo este css 😭");
+        document.getElementsByClassName('Inp')[1].value="";
     }
 });
 createCard();
